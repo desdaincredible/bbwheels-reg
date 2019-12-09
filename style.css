@@ -1,0 +1,56 @@
+body {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.centered {
+    margin: 0 auto;
+}
+
+input, select {
+    width: 100%;;
+}
+
+h1, h2 {
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    padding-top: 1em;
+    color: darkgrey;
+}
+
+hr.darker {
+    border-top: 1px solid rgba(0,0,0,0.2);
+    margin: 2em 0 1em 0;
+}
+
+hr.statement {
+    border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+input[type="submit"]{
+    margin: 3em 0;
+}
+
+.header {
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+@media print {
+	.nonprintable {
+	    display: none;
+	}
+}
+
+.nonprintable {
+    padding: 3em 0 0 0;
+}
+
+button {
+    margin: 2em 0 !important;
+}
+
+.text-centered {
+    text-align: center;
+}

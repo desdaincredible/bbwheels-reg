@@ -1,0 +1,286 @@
+<?php
+$host = "localhost";
+$dbusername = "upg69cqavmt97";
+$dbpassword = "N1f(d@$1$@9M";
+$dbname = "dbdp2pk22xcqwx";
+
+// Create connection
+$conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT * FROM CustReg";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // echo count($result);
+    foreach ($result as $value) {
+        // echo reset($value);
+        // echo "-----";
+        $lastID = reset($value);
+    }
+    // echo $lastID;
+
+    $sql = "SELECT * from CustReg WHERE PlanID = $lastID";
+    if ($result = $conn->query($sql)) {
+        while ($row = mysqli_fetch_row($result)) {
+
+            foreach ($result as $row) {
+                $PlanID = $row['PlanID'];
+                $EnrollDate = $row['EnrollDate'];
+                $OrigInvNum = $row['OrigInvoiceNum'];
+                $CustName = $row['CustName'];
+                $CustEmail = $row['CustEmail'];
+                $CustPhone = $row['CustPhone'];
+                $VehicleYear = $row['VehicleYear'];
+                $VehicleMake = $row['VehicleMake'];
+                $VehicleModel = $row['VehicleModel'];
+                $VehicleMiles = $row['VehicleMiles'];
+                $TireQty = $row['TireQuantity'];
+                $TireMake = $row['TireMake1'];
+                $TireModel = $row['TireModel1'];
+                $TireSize = $row['TireSize1'];
+                $TirePrice = $row['TirePrice1'];
+            }
+
+            $conn->close();
+        }
+        mysqli_free_result($result);
+    }
+}
+
+$conn->close();
+
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BB Wheels Tire Warranty Registration</title>
+
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d89e2146bf.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+    <div class="container">
+
+
+        <div class="nonprintable col-sm-12">
+            <div class="alert alert-danger text-centered">
+                <strong>Please print or save this coverage statement for your records.</strong> <p>Please call 888-450-2808 if you have any questions.</p>
+            </div>
+            <button id="printPlan" name="print" type="button" class="coverage_copy btn btn-danger" value="Print">PRINT</button>
+        </div>
+
+
+        <div class="col-sm-12">
+            <h1>NATIONWIDE LIMITED ROAD HAZARD WARRANTY</h1>
+            <hr class="statement">
+        </div>
+
+        <div class="row col-sm-12">
+            <div class="col-sm-4">
+                <p class="header">Plan ID#:</p>
+                <p><?php echo $PlanID ?></p>
+            </div>
+
+            <div class="col-sm-4">
+                <p class="header">Enrollment Date:</p>
+                <p><?php echo $EnrollDate ?></p>
+            </div>
+
+            <div class="col-sm-4">
+                <p class="header">Order ID#:</p>
+                <p><?php echo $OrigInvNum ?></p>
+            </div>
+        </div>
+
+        <hr class="statement">
+
+        <div class="row col-sm-12">
+            <div class="col-sm-4">
+                <p class="header">Customer Name:</p>
+                <p><?php echo $CustName ?></p>
+            </div>
+            <div class="col-sm-4">
+                <p class="header">Customer Email:</p>
+                <p><?php echo $CustEmail ?></p>
+            </div>
+            <div class="col-sm-4">
+                <p class="header">Customer Phone:</p>
+                <p><?php echo $CustPhone ?></p>
+            </div>
+        </div>
+
+        <hr class="statement">
+
+        <div class="row col-sm-12">
+            <div class="col-sm-4">
+                <p class="header">Vehicle:</p>
+                <p><?php echo $VehicleYear ?> <?php echo $VehicleMake ?> <?php echo $VehicleModel ?></p>
+            </div>
+            <div class="col-sm-4">
+                <p class="header">Mileage:</p>
+                <p><?php echo $VehicleMiles ?></p>
+            </div>
+            <div class="col-sm-4">
+                <p class="header">Tires Covered:</p>
+                <p><?php echo $TireQty ?> - <?php echo $TireMake ?> <?php echo $TireModel ?></p>
+                <p>Size: <?php echo $TireSize ?>  &nbsp&nbsp&nbsp  Price: $<?php echo $TirePrice ?></p>
+            </div>
+        </div>
+
+        <hr class="statement">
+
+
+        <div class="row col-sm-12">
+            <div class="col-sm-4">
+                <p class="header">Issuing Dealer:</p>
+                <p>BB Wheels</p>
+            </div>
+            <div class="col-sm-4">
+                <p>PO Box 129</p>
+                <p>Albany, MN 56307</p>
+            </div>
+
+            <div class="col-sm-4">
+                <p>320-333-2155</p>
+                <a href="https://www.bbwheelsonline.com/"><p>bbwheelsonline.com</p></a>
+            </div>
+        </div>
+
+        <hr class="statement">
+        <div class="col-sm-12 centered">
+            <p>This Road Hazard Plan ("Plan") is offered by the selling dealer from which you
+                purchased the tires, provided and administered by Automotive Business Solutions. This Plan covers only
+                the new tires you purchased (not available on used tires), the original purchaser and the original
+                vehicle identified on the original purchase receipt. This Plan only applies to passenger and light truck
+                tires, which, during its tread life or within the covered period of time, becomes unserviceable because
+                of a road hazard. The Plan and tire purchase must appear on your receipt. A road hazard occurs when a
+                tire fails due to a puncture, bruise or break incurred during the course of normal driving on a
+                maintained road. Nails, glass, and potholes would be the most common examples of road hazard damage. The
+                obligations of the Provider are guaranteed under a reimbursement insurance policy issued by Lyndon
+                Southern Insurance Company, 10151 Deerwood Park Blvd., Bldg. 100, Suite 500, Jacksonville, FL 32256.
+                They can be contacted directly by calling (800) 888-2738.</p>
+        </div>
+        <div class="col-sm-12 centered">
+            <h2>WHAT YOU MUST DO TO OBTAIN SERVICE</h2>
+            <p><b>If possible, you should return to the facility where you originally purchased this Plan, for tire repair
+                    or replacement. If you are away from the original selling dealer, you must contact the program administrator by calling
+                    888-450-2808 for assistance in locating the nearest participating facility.</b><u>Prior authorization
+                    must be obtained to replace a tire damaged by a road hazard.</u></p>
+
+            <p>YOU MUST PRESENT THE ORIGINAL INVOICE SHOWING THE PURCHASE OF THE TIRE(S) AND THE PLAN.
+                The damaged tire must be made available for inspection by the facility and/or the Program Administrator.All
+                claims and any required documentation must be submitted to the facility or the Program Administrator within
+                60 days of the date of failure and/or service.</p>
+        </div>
+
+        <div class="col-sm-12 centered">
+            <h2>WHAT IS COVERED BY THE PLAN</h2>
+            <p>The Plan is valid for a period of 1 year or until any portion of the tire is worn to 2/32 of an inch or
+                less, whichever occurs first.</p>
+
+            <p><b>Tire Replacement:</b> If a tire becomes unserviceable because of a road hazard during the useable
+                tread life of the tire, it will be replaced with a new tire. If available, an exact make/model
+                replacement tire will be installed. If not available, a comparable quality tire will be installed. If
+                the tire failure occurs within the first 33% of useable treadwear, and cannot be safely repaired per
+                manufacturer's guidelines, the tire will be replaced with coverage up to 100% of the original price paid
+                for the tire. After the first 33% of useable treadwear, you will be charged for the consumed useable
+                treadwear on the original tire, times the original selling price of the tire. You will be responsible
+                for any taxes, mounting, balancing, and any other miscellaneous fees. When the tread is worn down to
+                2/32" the tire is considered worn out and is not eligible for adjustment. If you want a Plan on the
+                replacement tire, you must purchase a new Plan for the new tire.</p>
+
+            <p><b>Tire Repair:</b> If your tire is damaged due to a road hazard and can be safely repaired, the tire
+                will be repaired per manufacturer's guidelines at any participating facility. The Plan will cover up
+                $20.00 to have the tire repaired. The Plan will remain in effect.</p>
+        </div>
+
+        <div class="col-sm-12 centered">
+            <h2>FLAT TIRE CHANGING ASSISTANCE</h2>
+            <p>For 12 months from the date of purchase of this Plan, you may receive flat tire changing assistance by
+                calling the service provider of your choice. If you need assistance in locating a service provider in
+                your area, you may call <b> 888-450-2808. </b> You will be reimbursed up to $75 for eligible expenses incurred for flat tire
+                changing assistance. Flat tire changing assistance is strictly limited to the installation of your
+                useable spare tire. If you require a tow or any other service you are solely responsible for those
+                charges. This benefit applies only to motorized passenger vehicles and specifically excludes trailers or
+                those vehicles listed under the exclusions and limitations.</p>
+
+            <p>The following documentation must be submitted to the program administrator within 60 days of service to
+                receive a reimbursement:</p>
+            <ol>
+                <li>
+                    <p>A photocopy of the original invoice showing the purchase of the Plan and your complete name,
+                        address, and telephone number.</p>
+                </li>
+                <li>
+                    <p>A photocopy of the paid invoice for spare tire installation from a valid auto service provider.
+                        This paid invoice must detail the name address, and telephone number of the service provider.</p>
+                </li>
+            </ol>
+
+            <p>Submit the above documentation to: Road Hazard Plan Roadside Assistance, P.O. Box 33535 Denver, CO 80233.</p>
+        </div>
+
+        <div class="col-sm-12">
+            <h2>EXCLUSIONS AND LIMITATIONS</h2>
+
+            <p>The following vehicles are not eligible for Plan coverage: Vehicles with a manufacturer's load rating
+                capacity of greater than 1 ton. Vehicles used for farm or agricultural purpose. Commercial vehicles.
+                Coverage excludes damage from off-road use, collision, fire, vandalism, theft, snow chains,
+                manufacturer's defects, abuse and neglect (i.e., improper application, improper inflation, overloading,
+                brake lock up, wheel spinning, torque snags, etc.), cosmetic damage, sidewall abrasions or other
+                appearance items that do not affect the safety or performance of the tire. Tires with torn beads. Also
+                excluded are damages or irregular wear caused by misalignment, mechanical failures or interference with
+                vehicle components, tires that have been repaired in a manner other than per manufacturer's guidelines.
+                Road hazard that was sold on used tires. This Plan covers only the tires registered to the customer and
+                listed by DOT number during the initial registration.
+                <b> CONSEQUENTIAL AND INCIDENTAL DAMAGES ARE EXCLUDED.</b> Some states do not allow the exclusion or
+                limitation of consequential and incidental damages; therefore, such limitations or exclusions may not
+                apply to you. No expressed guarantees given other than that stated herein. This Plan gives you specific
+                legal rights; you may have other rights, which vary from state to state. You may return this Plan to the
+                selling dealer within 20 days of the date of purchase of the Plan, if no claim has been made under the
+                Plan, the Plan is void and you shall receive a refund of the full price paid for the Plan. Provider may
+                cancel this Plan for non-payment of Plan purchase price by the selling dealer to Provider, or for
+                material misrepresentation or fraud at time of sale. If Provider cancels this Plan, Provider or the
+                selling dealer will refund you 100% of the Plan purchase price.</p>
+
+            <p>Purchase price of this plan $_________</p>
+        </div>
+
+        <hr class="statement">
+
+        <div class="col-sm-12">
+            <p>Road Hazard Plan</p>
+            <p>PO Box 33535</p>
+            <p>Denver, CO 80233</p>
+            <p>866-830-4189</p>
+        </div>
+
+        <hr class="statement">
+    </div>
+
+    <script src="coverage_statement.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+[05-Dec-2019 22:23:30 CST6CDT] PHP Parse error:  syntax error, unexpected ',' in /home/customer/www/michaelc67.sg-host.com/public_html/new_plan.php on line 23
+[06-Dec-2019 10:52:50 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function lastInsertId() in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 3
+[06-Dec-2019 10:53:43 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function lastInsertId() in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 3
+[06-Dec-2019 10:59:35 CST6CDT] PHP Fatal error:  Uncaught Error: Call to a member function lastInsertId() on null in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 29
+[06-Dec-2019 11:00:16 CST6CDT] PHP Fatal error:  Uncaught Error: Call to a member function lastInsertId() on null in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 29
+[06-Dec-2019 11:05:06 CST6CDT] PHP Recoverable fatal error:  Object of class mysqli_result could not be converted to string in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 45
+[06-Dec-2019 11:06:29 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function single() in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php:45
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 45
+[06-Dec-2019 11:07:39 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli::single() in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php:45
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 45
+[06-Dec-2019 11:08:21 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli::single() in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php:50
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 50
+[06-Dec-2019 11:08:24 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli::single() in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php:50
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 50
+[06-Dec-2019 11:08:34 CST6CDT] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php:33
+Stack trace:
+#0 /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php(50): single()
+#1 {main}
+  thrown in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 33
+[06-Dec-2019 11:09:23 CST6CDT] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php:47
+Stack trace:
+#0 /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php(51): single()
+#1 {main}
+  thrown in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 47
+[06-Dec-2019 11:09:27 CST6CDT] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php:47
+Stack trace:
+#0 /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php(51): single()
+#1 {main}
+  thrown in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 47
+[06-Dec-2019 11:10:13 CST6CDT] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php:47
+Stack trace:
+#0 /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php(51): single(Object(mysqli_result))
+#1 {main}
+  thrown in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 47
+[06-Dec-2019 11:10:44 CST6CDT] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php:47
+Stack trace:
+#0 /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php(51): single()
+#1 {main}
+  thrown in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 47
+[06-Dec-2019 11:17:11 CST6CDT] PHP Fatal error:  An iterator cannot be used with foreach by reference in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 19
+[06-Dec-2019 11:17:29 CST6CDT] PHP Recoverable fatal error:  Object of class mysqli_result could not be converted to string in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 21
+[06-Dec-2019 11:37:15 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function 5() in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 26
+[06-Dec-2019 11:41:34 CST6CDT] PHP Fatal error:  Uncaught Error: Cannot use object of type mysqli_result as array in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 24
+[06-Dec-2019 11:41:54 CST6CDT] PHP Fatal error:  Uncaught Error: Cannot use object of type mysqli_result as array in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 24
+[06-Dec-2019 11:41:56 CST6CDT] PHP Fatal error:  Uncaught Error: Cannot use object of type mysqli_result as array in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 24
+[06-Dec-2019 11:42:38 CST6CDT] PHP Fatal error:  Uncaught Error: Cannot use object of type mysqli_result as array in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 22
+[06-Dec-2019 11:42:41 CST6CDT] PHP Fatal error:  Uncaught Error: Cannot use object of type mysqli_result as array in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 22
+[06-Dec-2019 11:47:09 CST6CDT] PHP Fatal error:  Uncaught Error: Unsupported operand types in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 24
+[06-Dec-2019 11:47:41 CST6CDT] PHP Parse error:  syntax error, unexpected '[', expecting ']' in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 24
+[06-Dec-2019 13:38:12 CST6CDT] PHP Recoverable fatal error:  Object of class mysqli_result could not be converted to string in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 30
+[06-Dec-2019 13:40:52 CST6CDT] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 42
+[06-Dec-2019 13:41:00 CST6CDT] PHP Recoverable fatal error:  Object of class mysqli_result could not be converted to string in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 26
+[06-Dec-2019 13:41:11 CST6CDT] PHP Fatal error:  Uncaught Error: Cannot use object of type mysqli_result as array in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 26
+[06-Dec-2019 13:47:40 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_fetch_row() in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 29
+[06-Dec-2019 15:16:26 CST6CDT] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 49
+[06-Dec-2019 15:16:55 CST6CDT] PHP Recoverable fatal error:  Object of class mysqli_result could not be converted to string in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 33
+[06-Dec-2019 15:26:36 CST6CDT] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 56
+[06-Dec-2019 15:56:55 CST6CDT] PHP Parse error:  syntax error, unexpected '}', expecting variable (T_VARIABLE) or '{' or '$' in /home/customer/www/michaelc67.sg-host.com/public_html/coverage_statement.php on line 33

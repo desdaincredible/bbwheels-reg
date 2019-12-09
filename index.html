@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BB Wheels Tire Warranty Registration</title>
+
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="col-sm-12 centered">
+    <h1>Tire Warranty Registration</h1>
+    <hr class="darker">
+
+        <div>
+            <small>DISCLAIMER FROM TC GOES HERE</small>
+        </div>
+
+
+        <form name="new_plan" id="new_plan" action="new_plan.php" method="post">
+
+            <div>
+                <h2>Customer Information</h2>
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-3">
+                    <p>Name</p>
+                    <input type="text" id="cust-name" name="CustName" placeholder="first and last">
+                </div>
+
+                <div class="col-sm-3">
+                    <p>Email</p>
+                    <input type="text" id="cust-email" name="CustEmail">
+                </div>
+
+                <div class="col-sm-3">
+                    <p>Phone</p>
+                    <input type="text" id="cust-phone" name="CustPhone">
+                </div>
+
+                <div class="col-sm-3">
+                    <p>Order ID Number:</p>
+                    <input type="text" name="OrigInvoiceNum" id="OrigInvoiceNum">
+                </div>
+            </div>
+            <hr class="darker">
+
+            <div>
+                <h2>Vehicle Information</h2>
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-3">
+                    <p>Vehicle Year</p>
+                    <select id="vehicle_year" name="VehicleYear">
+                        <option disabled selected>select year</option>
+                    </select>
+                    <div id="year_text_input"></div>
+                </div>
+
+                <div class="col-sm-3">
+                    <p>Vehicle Make</p>
+                    <select id="vehicle_make" name="VehicleMake">
+                        <option disabled selected>select make</option>
+                        <option>Other</option>
+                    </select>
+                    <div id="make_text_input"></div>
+                </div>
+
+                <div class="col-sm-3">
+                    <p>Vehicle Model</p>
+                    <select id="vehicle_model" name="VehicleModel">
+                        <option disabled selected>select model</option>
+                        <option>Other</option>
+                    </select>
+                    <div id="model_text_input"></div>
+                </div>
+
+                <div class="col-sm-3">
+                    <p>Current Mileage on Vehicle</p>
+                    <input type='text' id="VehicleMiles" name='VehicleMiles' size="100">
+                </div>
+            </div>
+            <hr class="darker">            
+
+            <div>
+                <h2>Tire Information</h2>
+            </div>
+
+
+            <div class="row">
+                <div class="col-sm-3">
+                <p>Number of Tires Purchased</p>
+                </div>
+                <div class="col-sm-3">
+                    <select size="1" tabindex="1" id="TireQuantity" name="TireQuantity">
+                        <option value="0">Please Select</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+            </div>
+            
+            <hr class="darker">
+
+
+            <div>
+                <h3>Tire 1</h3>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <p>Tire Make</p>
+                    <input name="TireMake1" id="TireMake1" type="text">
+                </div>
+                
+                <div class="col">
+                    <p>Tire Model</p>
+                    <input name="TireModel1" id="TireModel1" type="text">
+                </div>
+                
+                <div class="col">
+                    <p>Tire Size</p>
+                    <input id="TireSize1" name="TireSize1" type="text">
+                </div>
+                
+                <div class="col">
+                    <p>Tire Price</p>
+                    <input id="TirePrice1" name="TirePrice1" type="text">
+                </div>
+            </div>
+
+            <div class="col-sm-3 centered">
+                <button id="submit" class="btn btn-danger" type="submit">SUBMIT</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<script src="ymm.js"></script>
