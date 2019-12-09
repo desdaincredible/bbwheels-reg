@@ -25,11 +25,6 @@
     <h1>Tire Warranty Registration</h1>
     <hr class="darker">
 
-        <div>
-            <small>DISCLAIMER FROM TC GOES HERE</small>
-        </div>
-
-
         <form name="new_plan" id="new_plan" action="new_plan.php" method="post">
 
             <div>
@@ -93,7 +88,7 @@
                 </div>
 
                 <div class="col-sm-3">
-                    <p>Current Mileage on Vehicle</p>
+                    <p>Current Mileage</p>
                     <input type='text' id="VehicleMiles" name='VehicleMiles' size="100">
                 </div>
             </div>
@@ -110,50 +105,84 @@
                 </div>
                 <div class="col-sm-3">
                     <select size="1" tabindex="1" id="TireQuantity" name="TireQuantity">
-                        <option value="0">Please Select</option>
-                        <option>1</option>
+                        <!-- <option value="0">Please Select</option> -->
+                        <option selected>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
                     </select>
                 </div>
+                    <div class="" id="tire-same"></div>
             </div>
             
             <hr class="darker">
 
-
-            <div>
-                <h3>Tire 1</h3>
-            </div>
-
-            <div class="row">
-                <div class="col">
-                    <p>Tire Make</p>
-                    <input name="TireMake1" id="TireMake1" type="text">
+            <div id="tire-section">
+                <div id="tire1">
+                    <h3>Tire 1</h3>
                 </div>
-                
-                <div class="col">
-                    <p>Tire Model</p>
-                    <input name="TireModel1" id="TireModel1" type="text">
-                </div>
-                
-                <div class="col">
-                    <p>Tire Size</p>
-                    <input id="TireSize1" name="TireSize1" type="text">
-                </div>
-                
-                <div class="col">
-                    <p>Tire Price</p>
-                    <input id="TirePrice1" name="TirePrice1" type="text">
+                <div class="row">
+                    <div class="col">
+                        <p>Tire Make</p>
+                        <input name="TireMake1" id="TireMake1" type="text">
+                    </div>
+                    <div class="col">
+                        <p>Tire Model</p>
+                        <input name="TireModel1" id="TireModel1" type="text">
+                    </div>
+                    <div class="col">
+                        <p>Tire Size</p>
+                        <input id="TireSize1" name="TireSize1" type="text">
+                    </div>
+                    <div class="col">
+                        <p>Tire Price</p>
+                        <input id="TirePrice1" name="TirePrice1" type="text">
+                    </div>
                 </div>
             </div>
+
+
 
             <div class="col-sm-3 centered">
                 <button id="submit" class="btn btn-danger" type="submit">SUBMIT</button>
             </div>
 
         </form>
+
+        <hr class="darker">
+        <div>
+            <small class="text-muted"><strong>Vehicles/Damage NOT eligible for coverage:</strong> Vehicles with a manufacturer’s load rating capacity of greater than 1 ton, vehicles used for farm or agricultural purpose, commercial vehicles, damage from off-road use, collision, abuse and neglect, cosmetic damage, etc. Please see Terms and Conditions for full details.</small>
+        </div>
     </div>
 </div>
 
 <script src="ymm.js"></script>
+
+<script>
+
+$('#TireQuantity').change(function(){
+    tireQtySelected = $('#TireQuantity').val();
+    let tireDivs = [];
+    for (let i = 1; i <= tireQtySelected; i++){
+        tireDivs.push('<div id="tire' + i + '"><h3>Tire ' + i + '</h3></div><div class="row"><div class="col"><p>Tire Make</p><input name="TireMake' + i + '" id="TireMake' + i + '" type="text"></div><div class="col"><p>Tire Model</p><input name="TireModel' + i + '" id="TireModel' + i + '" type="text"></div><div class="col"><p>Tire Size</p><input id="TireSize' + i + '" name="TireSize' + i + '" type="text"></div><div class="col"><p>Tire Price</p><input id="TirePrice' + i + '" name="TirePrice' + i + '" type="text"></div></div>');
+    }
+    $('#tire-section').html(tireDivs);
+
+    if(tireQtySelected > 1){
+        $('#tire-same').html('All tires are same make, model, size and price<input id="tire-same-check" type="checkbox">');
+    }
+
+    $('#tire-same-check').change(function(){
+        if($('#tire-same-check').prop("checked") && $('#TireMake1').val()){
+
+                for (let i = 1; i <= tireQtySelected; i++){
+                    $('input#TireMake1').change(function(){
+                        $('input#TireMake' + i).val($('#TireMake1').val());
+                    })
+                }
+        }
+    })
+
+
+})
+</script>

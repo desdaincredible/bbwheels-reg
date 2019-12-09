@@ -15,13 +15,19 @@ h1, h2 {
     font-family: "Oswald", sans-serif;
     text-transform: uppercase;
     letter-spacing: .1em;
-    padding-top: 1em;
     color: darkgrey;
+}
+
+h3 {
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    padding-top: 0.5em;
 }
 
 hr.darker {
     border-top: 1px solid rgba(0,0,0,0.2);
-    margin: 2em 0 1em 0;
+    margin: 1em 0;
 }
 
 hr.statement {
@@ -48,7 +54,7 @@ input[type="submit"]{
 }
 
 button {
-    margin: 2em 0 !important;
+    margin: 1em 0 !important;
 }
 
 .text-centered {
