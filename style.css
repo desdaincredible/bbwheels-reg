@@ -60,3 +60,11 @@ button {
 .text-centered {
     text-align: center;
 }
+
+.address {
+    font-size: 1.25em;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 0.5em;
+    padding: 1em 0;
+}

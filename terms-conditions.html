@@ -1,73 +1,3 @@
-<?php
-$host = "localhost";
-$dbusername = "upve7vft38658";
-$dbpassword = "4sz~#12e)4s@";
-$dbname = "dbtqu5hjv9rcgj";
-
-// Create connection
-$conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-$sql = "SELECT * FROM CustReg";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    // echo count($result);
-    foreach ($result as $value) {
-        // echo reset($value);
-        // echo "-----";
-        $lastID = reset($value);
-    }
-    // echo $lastID;
-
-    $sql = "SELECT * from CustReg WHERE PlanID = $lastID";
-    if ($result = $conn->query($sql)) {
-        while ($row = mysqli_fetch_row($result)) {
-
-            foreach ($result as $row) {
-                $PlanID = $row['PlanID'];
-                $EnrollDate = $row['EnrollDate'];
-                $OrigInvNum = $row['OrigInvoiceNum'];
-                $CustName = $row['CustName'];
-                $CustEmail = $row['CustEmail'];
-                $CustPhone = $row['CustPhone'];
-                $VehicleYear = $row['VehicleYear'];
-                $VehicleMake = $row['VehicleMake'];
-                $VehicleModel = $row['VehicleModel'];
-                $VehicleMiles = $row['VehicleMiles'];
-                $TireQty = $row['TireQuantity'];
-                $TireMake1 = $row['TireMake1'];
-                $TireModel1 = $row['TireModel1'];
-                $TireSize1 = $row['TireSize1'];
-                $TirePrice1 = $row['TirePrice1'];
-                $TireMake2 = $row['TireMake2'];
-                $TireModel2 = $row['TireModel2'];
-                $TireSize2 = $row['TireSize2'];
-                $TirePrice2 = $row['TirePrice2'];
-                $TireMake3 = $row['TireMake3'];
-                $TireModel3 = $row['TireModel3'];
-                $TireSize3 = $row['TireSize3'];
-                $TirePrice3 = $row['TirePrice3'];
-                $TireMake4 = $row['TireMake4'];
-                $TireModel4 = $row['TireModel4'];
-                $TireSize4 = $row['TireSize4'];
-                $TirePrice4 = $row['TirePrice4'];
-            }
-
-            $conn->close();
-        }
-        mysqli_free_result($result);
-    }
-}
-
-$conn->close();
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -75,7 +5,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>BBWHEELS NATIONWIDE LIMITED ROAD HAZARD PLAN REGISTRATION</title>
+    <title>BBWHEELS NATIONWIDE LIMITED ROAD HAZARD PLAN TERMS AND CONDITIONS</title>
 
     <link href="style.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap" rel="stylesheet">
@@ -94,141 +24,8 @@ $conn->close();
 <body>
     <div class="container">
 
-
-        <div class="nonprintable col-sm-12">
-            <div class="alert alert-danger text-centered">
-                <strong>Please print or save this coverage statement for your records.</strong> <p>Please call 888-450-2808 if you have any questions.</p>
-            </div>
-            <button id="printPlan" name="print" type="button" class="coverage_copy btn btn-danger" value="Print">PRINT / SAVE</button>
-        </div>
-
-
         <div class="col-sm-12">
-            <h1>BB WHEELS NATIONWIDE LIMITED ROAD HAZARD PLAN</h1>
-            <h2>Coverage Statement</h2>
-            <hr class="statement">
-        </div>
-
-        <div class="row col-sm-12">
-            <div class="col-sm-4">
-                <p class="header">Plan ID#:</p>
-                <p>IB<?php echo $PlanID ?></p>
-            </div>
-
-            <div class="col-sm-4">
-                <p class="header">Enrollment Date:</p>
-                <p><?php echo $EnrollDate ?></p>
-            </div>
-
-            <div class="col-sm-4">
-                <p class="header">Order ID#:</p>
-                <p><?php echo $OrigInvNum ?></p>
-            </div>
-        </div>
-
-        <hr class="statement">
-
-        <div class="row col-sm-12">
-            <div class="col-sm-4">
-                <p class="header">Customer Name:</p>
-                <p><?php echo $CustName ?></p>
-            </div>
-            <div class="col-sm-4">
-                <p class="header">Customer Email:</p>
-                <p><?php echo $CustEmail ?></p>
-            </div>
-            <div class="col-sm-4">
-                <p class="header">Customer Phone:</p>
-                <p><?php echo $CustPhone ?></p>
-            </div>
-        </div>
-
-        <hr class="statement">
-
-        <div class="row col-sm-12">
-            <div class="col-sm-4">
-                <p class="header">Vehicle:</p>
-                <p><?php echo $VehicleYear ?> <?php echo $VehicleMake ?> <?php echo $VehicleModel ?></p>
-            </div>
-            <div class="col-sm-4">
-                <p class="header">Mileage:</p>
-                <p><?php echo $VehicleMiles ?></p>
-            </div>
-        </div>
-
-        <hr class="statement">
-
-        <div class="col-sm-12">
-            <p><span class="header">Tires Covered: </span>(<?php echo $TireQty ?> Total)</p>
-        </div>
-
-        <div class="row col-sm-12">
-            <div class="col-sm-4">
-                <p class="header">Make/Model:</p>
-                <p><?php echo $TireMake1 ?> <?php echo $TireModel1 ?></p>
-            </div>
-            <div class="col-sm-4">
-                <p class="header">Size:</p>
-                <p><?php echo $TireSize1 ?></p>
-            </div>
-            <div class="col-sm-4">
-                <p class="header">Price:</p>
-                <p><?php echo $TirePrice1 ?></p>
-            </div>
-        </div>
-
-        <div class="row col-sm-12">
-            <div class="col-sm-4">
-                <p><?php echo $TireMake2 ?> <?php echo $TireModel2 ?></p>
-            </div>
-            <div class="col-sm-4">
-                <p><?php echo $TireSize2 ?></p>
-            </div>
-            <div class="col-sm-4">
-                <p><?php echo $TirePrice2 ?></p>
-            </div>
-        </div>
-
-        <div class="row col-sm-12">
-            <div class="col-sm-4">
-                <p><?php echo $TireMake3 ?> <?php echo $TireModel3 ?></p>
-            </div>
-            <div class="col-sm-4">
-                <p><?php echo $TireSize3 ?></p>
-            </div>
-            <div class="col-sm-4">
-                <p><?php echo $TirePrice3 ?></p>
-            </div>
-        </div>
-
-        <div class="row col-sm-12">
-            <div class="col-sm-4">
-                <p><?php echo $TireMake4 ?> <?php echo $TireModel4 ?></p>
-            </div>
-            <div class="col-sm-4">
-                <p><?php echo $TireSize4 ?></p>
-            </div>
-            <div class="col-sm-4">
-                <p><?php echo $TirePrice4 ?></p>
-            </div>
-        </div>
-
-        <hr class="statement">
-
-        <div class="row col-sm-12">
-            <div class="col-sm-4">
-                <p class="header">Issuing Dealer:</p>
-                <p>BB Wheels</p>
-            </div>
-            <div class="col-sm-4">
-                <p>PO Box 129</p>
-                <p>Albany, MN 56307</p>
-            </div>
-
-            <div class="col-sm-4">
-                <p>320-333-2155</p>
-                <a href="https://www.bbwheelsonline.com/"><p>bbwheelsonline.com</p></a>
-            </div>
+            <h1>BBWHEELS NATIONWIDE LIMITED ROAD HAZARD PLAN</h1>
         </div>
 
         <hr class="statement">
@@ -237,7 +34,7 @@ $conn->close();
         </div>
 
         <div class="col-sm-12 centered">
-            <p><strong>YOU MUST REGISTER YOUR TIRES WITHIN 15 DAYS OF PURCHASE TO BE ELIGIBLE FOR THE ROAD HAZARD PROGRAM COVERAGE. YOU MAY REGISTER THE TIRES AT <a href="WWW.TIREWARRANTY.COM">WWW.TIREWARRANTY.COM</a></strong></p>
+            <p><strong>YOU MUST REGISTER YOUR TIRES WITHIN 15 DAYS OF PURCHASE TO BE ELIGIBLE FOR THE ROAD HAZARD PROGRAM COVERAGE. YOU MAY REGISTER THE TIRES AT <a href="https://tirewarranty.com/reg/" target="_blank">WWW.TIREWARRANTY.COM</a></strong></p>
         </div>
         <div class="col-sm-12 centered">
             <h2>WHAT YOU MUST DO TO OBTAIN SERVICE</h2>
@@ -290,8 +87,6 @@ $conn->close();
         </div>
 
     </div>
-
-    <script src="coverage_statement.js"></script>
 
 </body>
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>BB Wheels Tire Warranty Registration</title>
+    <title>BBWHEELS NATIONWIDE LIMITED ROAD HAZARD PLAN REGISTRATION</title>
 
         <link href="style.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
 
 <div class="container-fluid">
     <div class="col-sm-12 centered">
-    <h1>Tire Warranty Registration</h1>
+    <h1>BB WHEELS NATIONWIDE LIMITED ROAD HAZARD PLAN REGISTRATION</h1>
     <hr class="darker">
 
         <form name="new_plan" id="new_plan" action="new_plan.php" method="post">
@@ -136,7 +136,7 @@
                     </div>
                     <div class="col">
                         <p>Tire Price</p>
-                        <input id="TirePrice1" name="TirePrice1" type="text">
+                        <input id="TirePrice1" name="TirePrice1" type="text" value="0.00">
                     </div>
                 </div>
             </div>
@@ -164,25 +164,8 @@ $('#TireQuantity').change(function(){
     tireQtySelected = $('#TireQuantity').val();
     let tireDivs = [];
     for (let i = 1; i <= tireQtySelected; i++){
-        tireDivs.push('<div id="tire' + i + '"><h3>Tire ' + i + '</h3></div><div class="row"><div class="col"><p>Tire Make</p><input name="TireMake' + i + '" id="TireMake' + i + '" type="text"></div><div class="col"><p>Tire Model</p><input name="TireModel' + i + '" id="TireModel' + i + '" type="text"></div><div class="col"><p>Tire Size</p><input id="TireSize' + i + '" name="TireSize' + i + '" type="text"></div><div class="col"><p>Tire Price</p><input id="TirePrice' + i + '" name="TirePrice' + i + '" type="text"></div></div>');
+        tireDivs.push('<div id="tire' + i + '"><h3>Tire ' + i + '</h3></div><div class="row"><div class="col"><p>Tire Make</p><input name="TireMake' + i + '" id="TireMake' + i + '" type="text"></div><div class="col"><p>Tire Model</p><input name="TireModel' + i + '" id="TireModel' + i + '" type="text"></div><div class="col"><p>Tire Size</p><input id="TireSize' + i + '" name="TireSize' + i + '" type="text"></div><div class="col"><p>Tire Price</p><input id="TirePrice' + i + '" name="TirePrice' + i + '" type="text" value="0.00"></div></div>');
     }
     $('#tire-section').html(tireDivs);
-
-    if(tireQtySelected > 1){
-        $('#tire-same').html('All tires are same make, model, size and price<input id="tire-same-check" type="checkbox">');
-    }
-
-    $('#tire-same-check').change(function(){
-        if($('#tire-same-check').prop("checked") && $('#TireMake1').val()){
-
-                for (let i = 1; i <= tireQtySelected; i++){
-                    $('input#TireMake1').change(function(){
-                        $('input#TireMake' + i).val($('#TireMake1').val());
-                    })
-                }
-        }
-    })
-
-
 })
 </script>
