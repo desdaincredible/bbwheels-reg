@@ -205,40 +205,34 @@ $('#TireQuantity').change(function(){
                 });
 
                 $('#TireSize1').change(function(){
-                    let tireMakeVal = '';
-                    let tireMakeArr =[];
-                    if($('#TireMake1').val()){
-                        const tireMake1 = $('#TireMake1').val();
+                    let tireSizeVal = '';
+                    let tireSizeArr =[];
+                    if($('#TireSize1').val()){
+                        const tireSize1 = $('#TireSize1').val();
                         for (let i = 1; i <= tireQtySelected; i++){
-                            tireMakeArr.push('TireMake' + i)
+                            tireSizeArr.push('TireSize' + i)
                         }
-                        for (let x = 0; x < tireMakeArr.length; x++){
-                            $('#' + tireMakeArr[x]).val(tireMake1);
+                        for (let x = 0; x < tireSizeArr.length; x++){
+                            $('#' + tireSizeArr[x]).val(tireSize1);
                         }
                     }
                 });
 
                 $('#TirePrice1').change(function(){
-                    let tireMakeVal = '';
-                    let tireMakeArr =[];
-                    if($('#TireMake1').val()){
-                        const tireMake1 = $('#TireMake1').val();
+                    let tirePriceVal = '';
+                    let tirePriceArr =[];
+                    if($('#TirePrice1').val()){
+                        const tirePrice1 = $('#TirePrice1').val();
                         for (let i = 1; i <= tireQtySelected; i++){
-                            tireMakeArr.push('TireMake' + i)
+                            tirePriceArr.push('TirePrice' + i)
                         }
-                        for (let x = 0; x < tireMakeArr.length; x++){
-                            $('#' + tireMakeArr[x]).val(tireMake1);
+                        for (let x = 0; x < tirePriceArr.length; x++){
+                            $('#' + tirePriceArr[x]).val(tirePrice1);
                         }
                     }
                 });
             }
         })
-
-        
-
-        
-
-
     }
 })
 </script>
