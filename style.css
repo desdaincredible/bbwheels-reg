@@ -68,3 +68,7 @@ button {
     line-height: 0.5em;
     padding: 1em 0;
 }
+
+.checkbox {
+    margin-left: 5em;
+}

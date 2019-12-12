@@ -1,0 +1,275 @@
+<div style="overflow-x:auto;">
+    <table align="center" style="padding: 10px">
+        <tbody>
+            <tr style="padding: 10px">
+                <td style="text-align: center; padding: 10px 0;">
+                    <img src="http://federatedlabor.com/images/federated-logo-sm.jpg" alt="Federated Labor"
+                        style="max-width: 250px; min-width: 150px;">
+                </td>
+            </tr>
+
+            <tr style="padding: 10px">
+                <td>
+                    <h2>Claim #LC{CLAIM_ID} has been sent.</h2>
+                </td>
+            </tr>
+
+            <tr style="padding: 10px">
+                <td style="text-align: center">
+                    <h3>Contact Information</h3>
+                </td>
+            </tr>
+
+            <tr style="padding: 10px">
+                <td style="border-bottom: 1px dotted #ccc">
+                    <strong>Claimant Name:</strong>
+                </td>
+                <td>
+                    {FILER_NAME}
+                </td>
+            </tr>
+
+            <tr style="padding: 10px">
+                <td style="border-bottom: 1px dotted #ccc">
+                    <strong>Claimant Phone:</strong>
+                </td>
+                <td>
+                    {FILER_PHONE}
+                </td>
+            </tr>
+
+
+
+            <tr style="padding: 10px">
+                <td style="text-align: center">
+                    <h3>Vehicle Owner Information</h3>
+                </td>
+            </tr>
+
+            <tr style="padding: 10px">
+                <td style="border-bottom: 1px dotted #ccc">
+                    <strong>Vehicle Owner Name:</strong>
+                </td>
+                <td>
+                    {CUSTOMER_FIRST_NAME} {CUSTOMER_LAST_NAME}
+                </td>
+            </tr>
+
+
+            <tr style="padding: 10px">
+                <td style="text-align: center">
+                    <h3>Vehicle Information</h3>
+                </td>
+            </tr>
+            
+            <tr style="padding: 10px">
+                <td style="border-bottom: 1px dotted #ccc">
+                    <strong>Vehicle Year:</strong>
+                </td>
+                <td>
+                    {VEHICLE_YEAR}
+                </td>
+            </tr>
+            
+            <tr style="padding: 10px">
+                <td style="border-bottom: 1px dotted #ccc">
+                    <strong>Vehicle Make:</strong>
+                </td>
+                <td>
+                    {VEHICLE_MAKE}
+                </td>
+            </tr>
+            
+            <tr style="padding: 10px">
+                <td style="border-bottom: 1px dotted #ccc">
+                    <strong>Vehicle Model:</strong>
+                </td>
+                <td>
+                    {VEHICLE_MODEL}
+                </td>
+            </tr>
+
+
+            <tr style="padding: 10px">
+                <td style="text-align: center">
+                    <h3>Claim Information</h3>
+                </td>
+            </tr>
+
+            <tr style="padding: 10px">
+                <td style="border-bottom: 1px dotted #ccc">
+                    <strong>Claim #:</strong>
+                </td>
+                <td>
+                    LC{CLAIM_ID}
+                </td>
+            </tr>
+
+
+            <tr style="padding: 10px">
+                <td style="border-bottom: 1px dotted #ccc">
+                    <strong>Original Repair Invoice Number:</strong>
+                </td>
+                <td>
+                    {INVOICE_NUMBER}
+                </td>
+            </tr>
+
+            <tr style="padding: 10px">
+                <td style="border-bottom: 1px dotted #ccc">
+                    <strong>Original Repair Date:</strong>
+                </td>
+                <td>
+                    {ORIGINAL_REPAIR_DATE}
+                </td>
+            </tr>
+
+            <tr style="padding: 10px">
+                <td style="border-bottom: 1px dotted #ccc">
+                    <strong>Original Repair Mileage Reading:</strong>
+                </td>
+                <td>
+                    {ORIGINAL_REPAIR_MILEAGE}
+                </td>
+            </tr>
+
+            <tr style="padding: 10px">
+                <td style="border-bottom: 1px dotted #ccc">
+                    <strong>Warranty Repair Invoice Number:</strong>
+                </td>
+                <td>
+                    {SUB_INVOICE_NUMBER}
+                </td>
+            </tr>
+
+            <tr style="padding: 10px">
+                <td style="border-bottom: 1px dotted #ccc">
+                    <strong>Warranty Repair Date:</strong>
+                </td>
+                <td>
+                    {SUB_REPAIR_DATE}
+                </td>
+            </tr>
+
+            <tr style="padding: 10px">
+                <td style="border-bottom: 1px dotted #ccc">
+                    <strong>Current Mileage Reading:</strong>
+                </td>
+                <td>
+                    {CURRENT_MILEAGE}
+                </td>
+            </tr>
+
+
+            <tr style="padding: 10px">
+                <td style="text-align: center">
+                    <h3>Repair Information</h3>
+                </td>
+            </tr>
+
+            <tr style="padding: 10px">
+                <td style="border-bottom: 1px dotted #ccc">
+                    <strong>Labor Charge Per Hour:</strong>
+                </td>
+                <td>
+                    {LABOR_PRICE}
+                </td>
+            </tr>
+
+            <tr style="padding: 10px">
+                <td style="border-bottom: 1px dotted #ccc">
+                    <strong>Original Labor Hours:</strong>
+                </td>
+                <td>
+                    {LABOR_HOUR}
+                </td>
+            </tr>
+
+            <tr style="padding: 10px">
+                <td style="border-bottom: 1px dotted #ccc">
+                    <strong>Original Repair Labor Charge:</strong>
+                </td>
+                <td>
+                    {ORIGINAL_LABOR_PRICE}
+                </td>
+            </tr>
+
+            <tr style="padding: 10px">
+                <td style="border-bottom: 1px dotted #ccc">
+                    <strong>Warranty Repair Labor Charge:</strong>
+                </td>
+                <td>
+                    {SUB_LABOR_PRICE}
+                </td>
+            </tr>
+
+            <tr style="padding: 10px">
+                <td style="border-bottom: 1px dotted #ccc">
+                    <strong>Repair Category:</strong>
+                </td>
+                <td>
+                    {REPAIR_CODE}
+                </td>
+            </tr>
+
+            <tr style="padding: 10px">
+                <td style="border-bottom: 1px dotted #ccc">
+                    <strong>Part Failure Description:</strong>
+                </td>
+                <td>
+                    {REPAIR_DESCRIPTION}
+                </td>
+            </tr>
+
+
+
+            <tr style="padding: 10px">
+                <td style="text-align: center">
+                    <h3>Uploaded Documents</h3>
+                </td>
+            </tr>
+
+            <tr style="padding: 10px">
+                <td style="border-bottom: 1px dotted #ccc">
+                    <strong>Original Repair Invoice/Work Order:</strong>
+                </td>
+                <td>
+                    <a target="_blank" href="http://federatedlabor.com/{ORIG_INV_FILENAME}">Original Invoice</a>
+                </td>
+            </tr>
+
+            <tr style="padding: 10px">
+                <td>
+                    <strong>Original Repair Parts Purchase Receipt:</strong>
+                </td>
+                <td>
+                    <a target="_blank" href="http://federatedlabor.com/{ORIG_PARTS_RECEIPT_FILENAME}">Original Parts
+                        Purchase</a>
+                </td>
+            </tr>
+
+            <tr style="padding: 10px">
+                <td style="border-bottom: 1px dotted #ccc">
+                    <strong>Current Invoice:</strong>
+                </td>
+                <td>
+                    <a target="_blank" href="http://federatedlabor.com/{CLAIM_INV_FILENAME}">Warranty Invoice</a>
+                </td>
+            </tr>
+
+            <tr style="padding: 10px">
+                <td>
+                    <strong>Warranty Repair Parts Purchase Receipt:</strong>
+                </td>
+                <td>
+                    <a target="_blank" href="http://federatedlabor.com/{CLAIM_PARTS_RECEIPT_FILENAME}">Warranty Parts
+                        Purchase</a>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+<hr>
+<p style="text-align: center">If there are any problems or you have questions about this claim, please call <a
+        style="color: #212529" href="tel:18003518438">1-800-351-8438</a>.</p>

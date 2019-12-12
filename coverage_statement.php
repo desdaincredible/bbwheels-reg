@@ -15,13 +15,9 @@ $sql = "SELECT * FROM CustReg";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    // echo count($result);
     foreach ($result as $value) {
-        // echo reset($value);
-        // echo "-----";
         $lastID = reset($value);
     }
-    // echo $lastID;
 
     $sql = "SELECT * from CustReg WHERE PlanID = $lastID";
     if ($result = $conn->query($sql)) {
@@ -237,7 +233,7 @@ $conn->close();
         </div>
 
         <div class="col-sm-12 centered">
-            <p><strong>YOU MUST REGISTER YOUR TIRES WITHIN 15 DAYS OF PURCHASE TO BE ELIGIBLE FOR THE ROAD HAZARD PROGRAM COVERAGE. YOU MAY REGISTER THE TIRES AT <a href="WWW.TIREWARRANTY.COM">WWW.TIREWARRANTY.COM</a></strong></p>
+            <p><strong>THIS REGISTRATION IS ONLY VALID IF YOU COMPLETED REGISTRATION WITHIN 15 DAYS OF PURCHASE.</strong></p>
         </div>
         <div class="col-sm-12 centered">
             <h2>WHAT YOU MUST DO TO OBTAIN SERVICE</h2>

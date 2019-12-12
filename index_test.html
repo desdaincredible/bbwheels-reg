@@ -103,16 +103,15 @@
                 <div class="col-sm-3">
                 <p>Number of Tires Purchased</p>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-1">
                     <select size="1" tabindex="1" id="TireQuantity" name="TireQuantity">
-                        <!-- <option value="0">Please Select</option> -->
                         <option selected>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
                     </select>
                 </div>
-                    <div class="" id="tire-same"></div>
+                    <div class="col-sm-6" id="tire-same"></div>
             </div>
             
             <hr class="darker">
@@ -167,5 +166,37 @@ $('#TireQuantity').change(function(){
         tireDivs.push('<div id="tire' + i + '"><h3>Tire ' + i + '</h3></div><div class="row"><div class="col"><p>Tire Make</p><input name="TireMake' + i + '" id="TireMake' + i + '" type="text"></div><div class="col"><p>Tire Model</p><input name="TireModel' + i + '" id="TireModel' + i + '" type="text"></div><div class="col"><p>Tire Size</p><input id="TireSize' + i + '" name="TireSize' + i + '" type="text"></div><div class="col"><p>Tire Price</p><input id="TirePrice' + i + '" name="TirePrice' + i + '" type="text" value="0.00"></div></div>');
     }
     $('#tire-section').html(tireDivs);
+
+    if(tireQtySelected > 1){
+        $('#tire-same').html('<div class="row"><div class="col-sm-1 checkbox"><input type="checkbox" id="allSameTires"></div><div class="col">All tires are the same make, model, size and price.</div></div>');
+
+        $('#allSameTires').change(function(){
+            console.log($('#allSameTires').prop('checked'))
+
+        if($('#allSameTires').prop('checked') == 'true'){
+            console.log('yep its checked')
+        }
+        })
+
+        
+
+        $('#TireMake1').change(function(){
+            console.log($('#TireMake1').val());
+            if($('#TireMake1').val()){
+                console.log('hit')
+            }
+        });
+        $('#TireModel1').change(function(){
+            console.log($('#TireModel1').val());
+        });
+        $('#TireSize1').change(function(){
+            console.log($('#TireSize1').val());
+        });
+        $('#TirePrice1').change(function(){
+            console.log($('#TirePrice1').val());
+        });
+
+
+    }
 })
 </script>
