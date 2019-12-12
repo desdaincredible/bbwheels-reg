@@ -109,6 +109,7 @@
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
+                        <option>5</option>
                     </select>
                 </div>
                     <div class="col-sm-6" id="tire-same"></div>
@@ -150,7 +151,7 @@
 
         <hr class="darker">
         <div>
-            <small class="text-muted"><strong>Vehicles/Damage NOT eligible for coverage:</strong> Vehicles with a manufacturer’s load rating capacity of greater than 1 ton, vehicles used for farm or agricultural purpose, commercial vehicles, damage from off-road use, collision, abuse and neglect, cosmetic damage, etc. Please see Terms and Conditions for full details.</small>
+            <small class="text-muted"><strong>Vehicles/Damage NOT eligible for coverage:</strong> Vehicles with a manufacturer’s load rating capacity of greater than 1 ton, vehicles used for farm or agricultural purpose, commercial vehicles, damage from off-road use, collision, abuse and neglect, cosmetic damage, etc. Please see <a href="https://tirewarranty.com/terms-and-conditions/" target="_blank">Terms and Conditions</a> for full details.</small>
         </div>
     </div>
 </div>
@@ -171,30 +172,71 @@ $('#TireQuantity').change(function(){
         $('#tire-same').html('<div class="row"><div class="col-sm-1 checkbox"><input type="checkbox" id="allSameTires"></div><div class="col">All tires are the same make, model, size and price.</div></div>');
 
         $('#allSameTires').change(function(){
-            console.log($('#allSameTires').prop('checked'))
 
-        if($('#allSameTires').prop('checked') == 'true'){
-            console.log('yep its checked')
-        }
+            if($('#allSameTires').prop('checked')){
+                const arr = ['TireMake1', 'TireModel1', 'TireSize1', 'TirePrice1'];
+
+                $('#TireMake1').change(function(){
+                    let tireMakeVal = '';
+                    let tireMakeArr =[];
+                    if($('#TireMake1').val()){
+                        const tireMake1 = $('#TireMake1').val();
+                        for (let i = 1; i <= tireQtySelected; i++){
+                            tireMakeArr.push('TireMake' + i)
+                        }
+                        for (let x = 0; x < tireMakeArr.length; x++){
+                            $('#' + tireMakeArr[x]).val(tireMake1);
+                        }
+                    }
+                });
+
+                $('#TireModel1').change(function(){
+                    let tireModelVal = '';
+                    let tireModelArr =[];
+                    if($('#TireModel1').val()){
+                        const tireModel1 = $('#TireModel1').val();
+                        for (let i = 1; i <= tireQtySelected; i++){
+                            tireModelArr.push('TireModel' + i)
+                        }
+                        for (let x = 0; x < tireModelArr.length; x++){
+                            $('#' + tireModelArr[x]).val(tireModel1);
+                        }
+                    }
+                });
+
+                $('#TireSize1').change(function(){
+                    let tireMakeVal = '';
+                    let tireMakeArr =[];
+                    if($('#TireMake1').val()){
+                        const tireMake1 = $('#TireMake1').val();
+                        for (let i = 1; i <= tireQtySelected; i++){
+                            tireMakeArr.push('TireMake' + i)
+                        }
+                        for (let x = 0; x < tireMakeArr.length; x++){
+                            $('#' + tireMakeArr[x]).val(tireMake1);
+                        }
+                    }
+                });
+
+                $('#TirePrice1').change(function(){
+                    let tireMakeVal = '';
+                    let tireMakeArr =[];
+                    if($('#TireMake1').val()){
+                        const tireMake1 = $('#TireMake1').val();
+                        for (let i = 1; i <= tireQtySelected; i++){
+                            tireMakeArr.push('TireMake' + i)
+                        }
+                        for (let x = 0; x < tireMakeArr.length; x++){
+                            $('#' + tireMakeArr[x]).val(tireMake1);
+                        }
+                    }
+                });
+            }
         })
 
         
 
-        $('#TireMake1').change(function(){
-            console.log($('#TireMake1').val());
-            if($('#TireMake1').val()){
-                console.log('hit')
-            }
-        });
-        $('#TireModel1').change(function(){
-            console.log($('#TireModel1').val());
-        });
-        $('#TireSize1').change(function(){
-            console.log($('#TireSize1').val());
-        });
-        $('#TirePrice1').change(function(){
-            console.log($('#TirePrice1').val());
-        });
+        
 
 
     }
